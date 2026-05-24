@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books - BookNook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">BookNook</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li>
+          <a href="cart.html" class="cart-link">
+            Cart (<span id="cart-count">0</span>)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Books Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Books</h1>
+      <p>Browse our collection of amazing books</p>
+    </div>
+  </section>
+
+  <!-- Filters Section -->
+  <section class="filters-section">
+    <div class="container">
+      <div class="filters">
+        <!-- Search Input -->
+        <div class="filter-group">
+          <label for="search">Search:</label>
+          <input 
+            type="text" 
+            id="search" 
+            placeholder="Search by title or author..."
+          >
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-group">
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All Categories</option>
+            <option value="Biography">Biography</option>
+            <option value="Children">Children</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Romance">Romance</option>
+            <option value="Science Fiction">Science Fiction</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Grid -->
+  <section class="books-section">
+    <div class="container">
+      <div class="books-grid" id="books-grid">
+        <!-- Books will be loaded here by JavaScript -->
+      </div>
+      
+      <!-- No Results Message -->
+      <div class="no-results" id="no-results" style="display: none;">
+        <p>No books found matching your search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BookNook. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/books-data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
